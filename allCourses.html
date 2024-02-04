@@ -3,17 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-School</title>
+    <title>All-Courses</title>
 
     <!-- Tailwind CSS CDN link -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- line awesome CDN link -->
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    />
-
 </head>
 <body>
     <!-- header section starts from here -->
@@ -28,7 +21,7 @@
                     <li><a href="#" class="px-5 py-1.5 rounded-2xl">Courses</a></li>
                     <li><a href="#" class="px-5 py-1.5 rounded-2xl">Others</a></li>
                     <li><a href="#" class="px-5 py-1.5 rounded-2xl">Blog</a></li>
-                    <li><a href="#" class="px-7 py-1.5 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500">Sign in</a></li>
+                    <li><a href="#" class="px-7 py-1.5 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500">Sign Out</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,68 +29,10 @@
     <!-- header section ends here -->
 
     <main>
-        <!-- banner section starts from here -->
-        <section id="banner-section" class="flex flex-col-reverse md:flex-row items-center justify-between gap-y-10 px-2 py-10 md:px-20 bg-[#f0fff0]">
-            <div class="left-side flex-1 text-center md:text-start ">
-                <h1 class="text-[#fd511a] font-medium ">Are you ready to Learn?</h1>
-                <h2 class="my-3 font-semibold text-4xl ">Learn With fun <br> on <span class="text-[#21b579] ">any schedule</span> </h2>
-                <p class="w-full md:w-2/3 leading-7 mb-5 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius blandit facilisis quam netus.</p>
-                <button class="px-7 py-1.5 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500" >Get Started</button>
-            </div>
-            <div class="right-side flex-1">
-                <div>
-                    <img src="./images/bannerMedia.svg" alt="The E-School banner" class="w-full">
-                </div>
-            </div>
-        </section>
-        <!-- banner section ends here -->
-
-        <!-- down the banner section starts from here -->
-        <section id="downTheBannerSection" class="flex flex-col md:flex-row items-center justify-center gap-5 mt-5 mb-16 w-full md:w-[70%] mx-auto text-center ">
-            <div class="itme-1 bg-[#F5FFFA] hover:bg-white hover:shadow-md rounded-md py-5 px-7 duration-500 ">
-                <div>
-                    <div class="w-2/4 mx-auto mb-2  ">
-                        <img src="./images/downTheBannerSection/1.png" alt="item1" class="w-full">
-                    </div>
-                    <h1 class="text-gray-800 font-semibold">1500+ Topic</h1>
-                    <p class="text-gray-500 text-sm ">Learn Anythings</p>
-                </div>
-            </div>
-            <div class="itme-2 bg-[#F5FFFA] hover:bg-white hover:shadow-md rounded-md py-5 px-7 duration-500">
-                <div>
-                    <div class="w-2/4 mx-auto mb-2  ">
-                        <img src="./images/downTheBannerSection/2.png" alt="item1" class="w-full">
-                    </div>
-                    <h1 class="text-gray-800 font-semibold">1800+ Students</h1>
-                    <p class="text-gray-500 text-sm ">Learn Anythings</p>
-                </div>
-            </div>
-            <div class="itme-3 bg-[#F5FFFA] hover:bg-white hover:shadow-md rounded-md py-5 px-7 duration-500">
-                <div>
-                    <div class="w-2/4 mx-auto mb-2  ">
-                        <img src="./images/downTheBannerSection/3.png" alt="item1" class="w-full">
-                    </div>
-                    <h1 class="text-gray-800 font-semibold">9K+ Test Token</h1>
-                    <p class="text-gray-500 text-sm ">Learn Anythings</p>
-                </div>
-            </div>
-            <div class="itme-4 bg-[#F5FFFA] hover:bg-white hover:shadow-md rounded-md py-5 px-7 duration-500">
-                <div>
-                    <div class="w-2/4 mx-auto mb-2  ">
-                        <img src="./images/downTheBannerSection/4.png" alt="item1" class="w-full">
-                    </div>
-                    <h1 class="text-gray-800 font-semibold">2000+ Student</h1>
-                    <p class="text-gray-500 text-sm ">Learn Anythings</p>
-                </div>
-            </div>
-        </section>
-        <!-- down the banner ends here -->
-
-        <!-- online courses section starts from here -->
-        <section id="online-courses-section" class="my-14 w-full md:w-[70%] mx-auto px-2">
-            <h1 class="text-3xl font-semibold text-center mt-8 mb-3 ">Online Courses</h1>
-            <div>
-                <div class="flex flex-col md:flex-row items-center justify-between gap-5 ">
+        <section id="all-courses-section" class="mt-10 mb-20 ">
+            <h1 class="text-3xl font-semibold mt-8 mb-5 w-full md:w-[70%] mx-auto ">All Courses</h1>
+            <div class="w-full md:w-[70%] mx-auto">
+                <div class="left w-full md:w-[70%] grid grid-cols-1 md:grid-cols-2 gap-6 ">
                     <div class="cart-1 shadow-md p-5 rounded-md ">
                         <div>
                             <img src="./images/onlineCourses/1.png" alt="course-1" class="w-full">
@@ -152,23 +87,64 @@
                             </right>
                         </div>
                     </div>
+                    <div class="cart-4 shadow-md p-5 rounded-md ">
+                        <div>
+                            <img src="./images/onlineCourses/4.png" alt="course-1" class="w-full">
+                        </div>
+                        <h2 class="mt-3 mb-1 font-semibold text-xl ">Modern Psychology</h2>
+                        <p class="mb-4 text-sm">1300 TK</p>
+                        <a href="" class="px-4 py-1 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500" >Buy Course</a>
+                        <div class="mt-4 flex items-center justify-between text-sm gap-6">
+                            <div class="left flex items-center justify-start gap-1 ">
+                                <i class="las la-calendar-week"></i>
+                                <p>Start 20  April, 2021</p>
+                            </div>
+                            <right class="flex items-center justify-start gap-1">
+                                <i class="las la-user-friends"></i>
+                                <p>60 seats</p>
+                            </right>
+                        </div>
+                    </div>
+                    <div class="cart-5 shadow-md p-5 rounded-md ">
+                        <div>
+                            <img src="./images/onlineCourses/5.png" alt="course-1" class="w-full">
+                        </div>
+                        <h2 class="mt-3 mb-1 font-semibold text-xl ">Modern Psychology</h2>
+                        <p class="mb-4 text-sm">1300 TK</p>
+                        <a href="" class="px-4 py-1 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500" >Buy Course</a>
+                        <div class="mt-4 flex items-center justify-between text-sm gap-6">
+                            <div class="left flex items-center justify-start gap-1 ">
+                                <i class="las la-calendar-week"></i>
+                                <p>Start 20  April, 2021</p>
+                            </div>
+                            <right class="flex items-center justify-start gap-1">
+                                <i class="las la-user-friends"></i>
+                                <p>60 seats</p>
+                            </right>
+                        </div>
+                    </div>
+                    <div class="cart-6 shadow-md p-5 rounded-md ">
+                        <div>
+                            <img src="./images/onlineCourses/6.png" alt="course-1" class="w-full">
+                        </div>
+                        <h2 class="mt-3 mb-1 font-semibold text-xl ">Modern Psychology</h2>
+                        <p class="mb-4 text-sm">1300 TK</p>
+                        <a href="" class="px-4 py-1 rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500" >Buy Course</a>
+                        <div class="mt-4 flex items-center justify-between text-sm gap-6">
+                            <div class="left flex items-center justify-start gap-1 ">
+                                <i class="las la-calendar-week"></i>
+                                <p>Start 20  April, 2021</p>
+                            </div>
+                            <right class="flex items-center justify-start gap-1">
+                                <i class="las la-user-friends"></i>
+                                <p>60 seats</p>
+                            </right>
+                        </div>
+                    </div>
                 </div>
-                <a href="./allCourses.html" class="px-4 py-1 block mx-auto w-fit mt-6  text-center rounded-full text-white bg-[#21B573] hover:text-[#21b573] hover:bg-transparent border-[.09rem] border-transparent hover:border-[#21b573] duration-500">See All Courses</a>
+                <div class="right w-full md:w-[30%]"></div>
             </div>
         </section>
-        <!-- online courses ends here -->
-
-        <!-- testimonial-section starts from here -->
-        <section id="testimonial-section" class="px-2 my-10">
-            <h1 class="text-3xl font-semibold text-center mt-8 mb-3 ">Testimonial</h1>
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 w-full md:w-[50%] mx-auto text-center md:text-start ">
-                <div class="rounded-full">
-                   <img src="./images/reviewer1.jpeg" alt="reviewer" class="h-[6rem] w-[6rem] md:w-[16.5rem] mx-auto rounded-full ">
-                </div>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-            </div>
-        </section>
-        <!-- testimonial-section ends here -->
     </main>
 
     <!-- footer section starts from here -->
