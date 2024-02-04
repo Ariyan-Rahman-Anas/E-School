@@ -1,18 +1,15 @@
-console.log("file connected!");
-
+//onClick event functionality for a cart
 function handleBuyCourse(data, ImgSrc) {
-  console.log(data);
   let courseName = data.children[1].innerText;
   let coursePrice = data.children[2].innerText;
   let coursePicture = data.children[0].children[0];
-  console.log(coursePicture);
 
   let selectedItemDiv = document.getElementById("selected-item-div");
 
   // Create a new div element
   let creatingDivForCartItem = document.createElement("div");
   creatingDivForCartItem.className =
-    "flex items-center justify-between my-4";
+    "flex items-center justify-between my-4 pr-1 hover:bg-gray-200 rounded-md duration-500 ";
 
   // Create the first children div for the image, paragraphs, and cancelButton
   let firstChildrenDiv = document.createElement("div");
@@ -33,6 +30,7 @@ function handleBuyCourse(data, ImgSrc) {
   // Create two p tags
   let creatingPForCourseName = document.createElement("p");
   let creatingPForPrice = document.createElement("p");
+  creatingPForPrice.className = "text-xs font-semibold ";
 
   // Set content for the paragraphs
   creatingPForCourseName.innerText = courseName;
@@ -42,11 +40,23 @@ function handleBuyCourse(data, ImgSrc) {
   let cancelButton = document.createElement("button");
 
   // Set content for the button
-    cancelButton.innerText = "X";
-    cancelButton.className ="font-semibold"
+  cancelButton.innerText = "X";
+  cancelButton.className =
+    "font-semibold h-[2rem] w-[2rem] p-1 rounded-full hover:text-white hover:bg-[#ff3811] duration-500 ";
+
+  // Declare cardPrice at a higher scope
+  let cardPrice;
 
   // Add click event listener to the cancelButton
   cancelButton.addEventListener("click", function () {
+    // Subtract the cardPrice from the total
+    let total = document.getElementById("total");
+    let totalNumber = parseFloat(total.innerText);
+    let cardPriceNumber = parseFloat(cardPrice);
+    let totalPay = totalNumber - cardPriceNumber;
+    let totalDigitFixed = totalPay.toFixed(2);
+    total.innerText = totalDigitFixed;
+
     // Remove the creatingDivForCartItem when cancelButton is clicked
     creatingDivForCartItem.remove();
   });
@@ -71,4 +81,21 @@ function handleBuyCourse(data, ImgSrc) {
 
   // Append the new div to the body or any other parent element
   selectedItemDiv.appendChild(creatingDivForCartItem);
+
+
+    // counting total items in the cart
+
+      let cartItemsLength = selectedItemDiv.children.length;
+      let totalItems = document.getElementById("total-items").innerText =cartItemsLength ;
+
+      console.log("Number of items in the cart:", cartItemsLength);
+    
+  //total payable calculating
+  cardPrice = coursePrice; // Assign the value of coursePrice to cardPrice
+  let total = document.getElementById("total");
+  let totalNumber = parseFloat(total.innerText);
+  let cardPriceNumber = parseFloat(cardPrice);
+  let totalPay = totalNumber + cardPriceNumber;
+  let totalDigitFixed = totalPay.toFixed(2);
+    total.innerText = totalDigitFixed;
 }
