@@ -1,8 +1,10 @@
-//onClick event functionality for a cart
+// Counter variable to keep track of the cart items
+let cartItemsCounter = 0;
+
+// //onClick event functionality for a cart
 function handleBuyCourse(data, ImgSrc) {
   let courseName = data.children[1].innerText;
   let coursePrice = data.children[2].innerText;
-  let coursePicture = data.children[0].children[0];
 
   let selectedItemDiv = document.getElementById("selected-item-div");
 
@@ -44,21 +46,26 @@ function handleBuyCourse(data, ImgSrc) {
   cancelButton.className =
     "font-semibold h-[2rem] w-[2rem] p-1 rounded-full hover:text-white hover:bg-[#ff3811] duration-500 ";
 
-  // Declare cardPrice at a higher scope
-  let cardPrice;
-
   // Add click event listener to the cancelButton
   cancelButton.addEventListener("click", function () {
     // Subtract the cardPrice from the total
     let total = document.getElementById("total");
     let totalNumber = parseFloat(total.innerText);
-    let cardPriceNumber = parseFloat(cardPrice);
+    let cardPriceNumber = parseFloat(coursePrice); // Use coursePrice directly
     let totalPay = totalNumber - cardPriceNumber;
     let totalDigitFixed = totalPay.toFixed(2);
     total.innerText = totalDigitFixed;
 
     // Remove the creatingDivForCartItem when cancelButton is clicked
     creatingDivForCartItem.remove();
+
+    // Update the cart items counter and log the updated value
+    cartItemsCounter--;
+    console.log("Number of items in the cart:", cartItemsCounter);
+
+    // Update the total-items element
+    let totalItems = document.getElementById("total-items");
+    totalItems.innerText = cartItemsCounter;
   });
 
   // Append the paragraphs to the text container
@@ -82,14 +89,6 @@ function handleBuyCourse(data, ImgSrc) {
   // Append the new div to the body or any other parent element
   selectedItemDiv.appendChild(creatingDivForCartItem);
 
-
-    // counting total items in the cart
-
-      let cartItemsLength = selectedItemDiv.children.length;
-      let totalItems = document.getElementById("total-items").innerText =cartItemsLength ;
-
-      console.log("Number of items in the cart:", cartItemsLength);
-    
   //total payable calculating
   cardPrice = coursePrice; // Assign the value of coursePrice to cardPrice
   let total = document.getElementById("total");
@@ -97,5 +96,13 @@ function handleBuyCourse(data, ImgSrc) {
   let cardPriceNumber = parseFloat(cardPrice);
   let totalPay = totalNumber + cardPriceNumber;
   let totalDigitFixed = totalPay.toFixed(2);
-    total.innerText = totalDigitFixed;
+  total.innerText = totalDigitFixed;
+
+  // Update the cart items counter and log the updated value
+  cartItemsCounter++;
+  console.log("Number of items in the cart:", cartItemsCounter);
+
+  // Update the total-items element
+  let totalItems = document.getElementById("total-items");
+  totalItems.innerText = cartItemsCounter;
 }
